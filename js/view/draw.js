@@ -243,13 +243,13 @@ define(["model/images", "model/canvas", "model/game", "model/character", "contro
 
         var drawScore = function drawScore() {
             var score = Character.ship.player.score;
-            Canvas.context.fillStyle = ("yellow");
+            Canvas.context.fillStyle = ("#FFFF66");
             Canvas.context.fillText("Score: " + score, Canvas.canvasWidth * 0.7, 40);
         };
 
         var drawHP = function drawHP() {
             var hp = Character.ship.player.hp;
-            Canvas.context.fillStyle = ("yellow");
+            Canvas.context.fillStyle = ("#FFFF66");
             Canvas.context.fillText("Health: " + hp, 30, 40);
         };
 
@@ -275,10 +275,10 @@ define(["model/images", "model/canvas", "model/game", "model/character", "contro
             Canvas.context.drawImage(restart, part1 * 1.2, part2, part1 * 0.75, part2 * 0.7);
             Canvas.context.drawImage(mainMenu, part1 * 2.1, part2, part1 * 0.75, part2 * 0.7);
             if (Game.isHighscore) {
-                Canvas.context.fillStyle = ("yellow");
+                Canvas.context.fillStyle = ("#FFFF66");
                 Canvas.context.fillText("HIGH SCORE", (Canvas.canvasWidth / 2) - 108, Canvas.canvasHeight / 1.7);
             }
-            Canvas.context.fillStyle = ("yellow");
+            Canvas.context.fillStyle = ("#FFFF66");
             const text = "Game Over  Level: " + Game.level;
             const scoreText = "Score: " + Character.ship.player.score;
             const textX = (Canvas.canvasWidth / 2) - 345;
@@ -331,7 +331,7 @@ define(["model/images", "model/canvas", "model/game", "model/character", "contro
                 Draw.drawScore();
                 Draw.drawHP();
             } else {
-                Canvas.context.fillStyle = ("yellow");
+                Canvas.context.fillStyle = ("#FFFF66");
                 Canvas.context.fillText("Level: " + Game.level, (Canvas.canvasWidth / 2) - 80, Canvas.canvasHeight / 2);
             }
             Draw.drawBullets();
