@@ -279,7 +279,16 @@ define(["model/images", "model/canvas", "model/game", "model/character", "contro
                 Canvas.context.fillText("HIGH SCORE", (Canvas.canvasWidth / 2) - 108, Canvas.canvasHeight / 1.7);
             }
             Canvas.context.fillStyle = ("yellow");
-            Canvas.context.fillText("Game Over  Level: " + Game.level + " Score: " + Character.ship.player.score, (Canvas.canvasWidth / 2) - 345, Canvas.canvasHeight / 1.5);
+            const text = "Game Over  Level: " + Game.level;
+            const scoreText = "Score: " + Character.ship.player.score;
+            const textX = (Canvas.canvasWidth / 2) - 345;
+            const textY = Canvas.canvasHeight / 1.5;
+            const scoreY = textY + 50;
+
+            Canvas.context.fillText(text, textX, textY);
+            Canvas.context.fillText(scoreText, textX, scoreY);
+
+
         };
 
         var drawStats = function drawStats() {
