@@ -2,29 +2,43 @@
 <html>
 
 <head>
-    <title>Generic Space Shooter</title>
+    <title>Space Shooter Game</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="./images/logo/favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+        /* เพิ่มสไตล์ CSS สำหรับปุ่ม Back to Menu */
+        .btn-back-to-menu {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* สีพื้นหลังปุ่ม */
+            color: #fff; /* สีตัวอักษร */
+            text-decoration: none;
+            border-radius: 5px; /* ทำให้มีมุมโค้ง */
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back-to-menu:hover {
+            background-color: #2980b9; /* สีพื้นหลังเมื่อชี้ (hover) */
+        }
+    </style>
+
     <script src="js/require.js" data-main="js/main"></script>
 </head>
 
 <body>
     <header id="top">
-        <div id="logo">
-        </div>
-        <nav id="buttons">
+        <div id="logo"></div>
+        <nav id="buttons" style="margin-left: 720PX;">
             <ul>
-                <li><a href="index.html" title="Main Page">Game</a>
-                </li>
-                <li><a href="about.html" title="About Page">About</a>
-                </li>
+                <!-- เปลี่ยน class เป็น btn-back-to-menu -->
+                <li><a href="index.html" title="Main Page" type="button" class="btn btn-dark btn-back-to-menu" style="margin-top: 5px;">Back to Menu</a></li>
             </ul>
         </nav>
     </header>
     <section id="gameSection">
-        <canvas id="gameCanvas" width="1000" height="500">
-        </canvas>
+        <canvas id="gameCanvas" width="1000" height="500"></canvas>
         <h1 class="error">Your browser does not support Canvas. Please upgrade your browser.</h1>
     </section>
 </body>
