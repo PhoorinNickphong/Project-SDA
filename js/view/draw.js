@@ -244,13 +244,13 @@ define(["model/images", "model/canvas", "model/game", "model/character", "contro
         var drawScore = function drawScore() {
             var score = Character.ship.player.score;
             Canvas.context.fillStyle = ("yellow");
-            Canvas.context.fillText("Score: " + score, Canvas.canvasWidth * 0.6, 40);
+            Canvas.context.fillText("Score: " + score, Canvas.canvasWidth * 0.7, 40);
         };
 
         var drawHP = function drawHP() {
             var hp = Character.ship.player.hp;
             Canvas.context.fillStyle = ("yellow");
-            Canvas.context.fillText("Health: " + hp, 0, 40);
+            Canvas.context.fillText("Health: " + hp, 30, 40);
         };
 
         var drawGameOver = function drawGameOver() {
@@ -279,7 +279,7 @@ define(["model/images", "model/canvas", "model/game", "model/character", "contro
                 Canvas.context.fillText("HIGH SCORE", (Canvas.canvasWidth / 2) - 108, Canvas.canvasHeight / 1.7);
             }
             Canvas.context.fillStyle = ("yellow");
-            Canvas.context.fillText("Game Over  Level: " + Game.level + "  Score: " + Character.ship.player.score, (Canvas.canvasWidth / 2) - 345, Canvas.canvasHeight / 1.5);
+            Canvas.context.fillText("Game Over  Level: " + Game.level + " Score: " + Character.ship.player.score, (Canvas.canvasWidth / 2) - 345, Canvas.canvasHeight / 1.5);
         };
 
         var drawStats = function drawStats() {
