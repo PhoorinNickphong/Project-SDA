@@ -2,25 +2,80 @@
 <html>
 
 <head>
-    <title>Space Shooter Game</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Game</title>
     <link rel="shortcut icon" href="./images/logo/favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
 
     <style>
-        /* เพิ่มสไตล์ CSS สำหรับปุ่ม Back to Menu */
-        .btn-back-to-menu {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #3498db; /* สีพื้นหลังปุ่ม */
-            color: #fff; /* สีตัวอักษร */
-            text-decoration: none;
-            border-radius: 5px; /* ทำให้มีมุมโค้ง */
-            transition: background-color 0.3s ease;
+        /* เอา CSS ที่ให้มาไปใช้กับปุ่ม Back to Menu */
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            text-decoration: none; 
         }
 
-        .btn-back-to-menu:hover {
-            background-color: #2980b9; /* สีพื้นหลังเมื่อชี้ (hover) */
+        .button-85:before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
         }
     </style>
 
@@ -30,10 +85,10 @@
 <body>
     <header id="top">
         <div id="logo"></div>
-        <nav id="buttons" style="margin-left: 720PX;">
+        <nav id="buttons" style="margin-left: 720px;">
             <ul>
-                <!-- เปลี่ยน class เป็น btn-back-to-menu -->
-                <li><a href="index.html" title="Main Page" type="button" class="btn btn-dark btn-back-to-menu" style="margin-top: 5px;">Back to Menu</a></li>
+                <!-- เปลี่ยน class เป็น button-85 -->
+                <li><a href="index.html" title="Main Page" type="button" class="btn btn-dark button-85">Back to Menu</a></li>
             </ul>
         </nav>
     </header>

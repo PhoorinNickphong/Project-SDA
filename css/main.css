@@ -141,3 +141,33 @@ section.credits a {
 	top: 69px;
 	left: 0px;
 }
+/* main.css */
+/* เพิ่มสไตล์ CSS สำหรับปุ่ม Back to Menu */
+.btn-back-to-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* สีพื้นหลังปุ่ม */
+    color: #fff; /* สีตัวอักษร */
+    text-decoration: none;
+    border-radius: 5px; /* ทำให้มีมุมโค้ง */
+    transition: background-color 0.3s ease;
+}
+
+.btn-back-to-menu:hover {
+    background-color: #2980b9; /* สีพื้นหลังเมื่อชี้ (hover) */
+}
+
+/* เพิ่มสไตล์ CSS สำหรับการ Responsive */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* ปรับขนาดตัวอักษรให้เหมาะสมกับหน้าจอขนาดเล็ก */
+    }
+
+    #buttons {
+        margin-left: 0; /* ปรับการจัดวางของปุ่มให้เหมาะสม */
+    }
+
+    .btn-back-to-menu {
+        padding: 8px 15px; /* ปรับขนาดของปุ่มให้เหมาะสมกับหน้าจอขนาดเล็ก */
+    }
+}
